@@ -1,0 +1,16 @@
+# Caminhos relativos a este arquivo. Crie os manifestos com dados consentidos.
+train_manifest = "../data/splits/train.jsonl"
+validation_manifest = "../data/splits/validation.jsonl"
+output_dir = "../artifacts/whisper-receptor"
+
+# Modelo multilíngue; o primeiro uso baixa pesos públicos do Hugging Face.
+model_name = "openai/whisper-tiny"
+language = "portuguese"
+epochs = 3
+learning_rate = 0.00001
+batch_size = 2
+gradient_accumulation_steps = 4
+seed = 42
+
+# Descomente para testar o fluxo com apenas uma atualização (não mede qualidade).
+# max_steps = 1
